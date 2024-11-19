@@ -50,5 +50,59 @@ if (person > 13) {
   console.log("ta huuhed ");
 }
 //  5dh dasgal the 4 operations and print the result.
-let num1 = 10;
-let num2 = 21;
+let num1 = 22;
+let num2 = 10;
+// + uildel
+console.log(num1, "+", num2, "=", num1 + num2);
+// - uildel
+console.log(num1, "-", num2, "=", num1 - num2);
+// * uildel
+console.log(num1, "*", num2, "=", num1 * num2);
+//  huwaah uildel
+console.log(num1, "%", num2, "=", num1 / num2);
+
+// 6dh dasgal unen hudliig oloh prag
+let a = "emegtei";
+if (a == "eregtei") {
+  console.log("ta eregtei mun bn ");
+} else {
+  console.log("ta eregtei bish bn");
+}
+
+//  7dh dasgal celsi fahrenheitru huwirgana
+let cels = 100;
+console.log("Fahrenheit:", cels * (9 / 5) + 32);
+
+// 8dh dasgal Write a program to check if a year is a leap year or not.
+let year = 2028;
+if (year % 4 == 0) {
+  if (year % 100 == 0) {
+    console.log("ene leap jil bish");
+  } else {
+    if (year % 400 == 0) {
+      console.log("ene leap jil bish");
+    } else {
+      console.log("ene leap jil mun");
+    }
+  }
+} else {
+  console.log("ene leap jil bish");
+}
+
+// 9dh dasgal Write a program to find the smallest of three numbers.
+let boow = 20;
+let boow2 = 15;
+let boow3 = 11;
+if (boow < boow2) {
+  if (boow2 > boow3) {
+    console.log("boow2 hamgiin hund");
+  } else {
+    console.log("boow3 hamgiin hund");
+  }
+} else {
+  if (boow > boow3) {
+    console.log("boow hamgiin hund");
+  } else {
+    console.log("boow3 hamgiin hund");
+  }
+}
