@@ -74,19 +74,19 @@ let cels = 100;
 console.log("Fahrenheit:", cels * (9 / 5) + 32);
 
 // 8dh dasgal Write a program to check if a year is a leap year or not.
-let year = 2028;
-if (year % 4 == 0) {
-  if (year % 100 == 0) {
-    console.log("ene leap jil bish");
+let year = 2024;
+if (year % 100 == 0) {
+  if (year % 400 == 0) {
+    console.log("ene leap jil mun bn");
   } else {
-    if (year % 400 == 0) {
-      console.log("ene leap jil bish");
-    } else {
-      console.log("ene leap jil mun");
-    }
+    console.log("ene leap jil bish bn");
   }
 } else {
-  console.log("ene leap jil bish");
+  if (year % 4 == 0) {
+    console.log("ene leap jil mun bn");
+  } else {
+    console.log("ene leap jil bish bn");
+  }
 }
 
 // 9dh dasgal Write a program to find the smallest of three numbers.
@@ -104,5 +104,39 @@ if (boow < boow2) {
     console.log("boow hamgiin hund");
   } else {
     console.log("boow3 hamgiin hund");
+  }
+}
+
+//  2024.11.20 for loop  ******************************************************************
+// 1-100 tegsh
+for (let i = 2; i <= 100; i = i + 2) {
+  console.log(i);
+}
+//  100-1  buurah sondgoi
+
+for (let i = 99; i > 0; i = i - 2) {
+  console.log(i);
+}
+//
+let num = 1024;
+let hariu = 0;
+for (let i = 1; i <= 10; i = i + 1) {
+  hariu = num * i;
+  console.log(num, "*", i, "=", hariu);
+}
+// Write a  find sum of all natural numbers between 1 to n.
+let n = 10;
+let b = 0;
+for (let i = 1; i <= n; i = i + 1) {
+  if (i % 2 == 0) {
+    b = b + i;
+  }
+}
+console.log(b);
+// Write a C program to find all factors of a number.
+let too = 12;
+for (i = 1; i <= too; i = i + 1) {
+  if (too % i == 0) {
+    console.log(i);
   }
 }
