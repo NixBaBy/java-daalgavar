@@ -1,3 +1,4 @@
+/** 
 // 1dh dasgal alimni nit une bananii niiit une iig oloh
 let apple = 15;
 let banana = 10;
@@ -105,4 +106,33 @@ if (boow < boow2) {
   } else {
     console.log("boow3 hamgiin hund");
   }
+}
+
+// dun shalgah
+let dun = 99;
+if (dun > 90 && dun < 100) {
+  console.log("A");
+} else {
+  if (dun < 90 && dun > 80) {
+    console.log("B");
+  } else {
+    if (dun < 80 && dun > 70) {
+      console.log("C");
+    } else {
+      if (dun < 70 && dun > 60) {
+        console.log("D");
+      } else {
+        if (dun < 60 && dun > 50) {
+          console.log("F");
+        }
+      }
+    }
+  }
+}
+*/
+
+// index css java
+let body = document.getElementsByTagName("body")[0];
+function setColor(name) {
+  body.style.backgroundColor = name;
 }
