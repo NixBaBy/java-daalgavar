@@ -3,6 +3,18 @@
   margin: 0;
   padding: 0;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+}
+.colors {
+  display: flex;
+  gap: 10px;
+}
 .button1 {
   background-color: green;
   border: none;
@@ -13,7 +25,7 @@
   font-size: 18px;
   border: 2px gray solid;
 }
-.button2 {
+.colors :nth-child(2) {
   background-color: red;
   border: none;
   border-radius: 12px;
@@ -33,7 +45,7 @@
   font-size: 18px;
   border: 2px gray solid;
 }
-.button4 {
+.random {
   border: none;
   border-radius: 12px;
   width: 100px;

@@ -130,14 +130,7 @@ if (dun > 90 && dun < 100) {
     }
   }
 }
-*/
-
-// index css java
-let body = document.getElementsByTagName("body")[0];
-function setColor(name) {
-  body.style.backgroundColor = name;
-=======
-//  2024.11.20 for loop  ******************************************************************
+  //  2024.11.20 for loop  ******************************************************************
 // 1-100 tegsh
 for (let i = 2; i <= 100; i = i + 2) {
   console.log(i);
@@ -169,5 +162,17 @@ for (i = 1; i <= too; i = i + 1) {
   if (too % i == 0) {
     console.log(i);
   }
->>>>>>> ea13a81c97f1ad364d6b51b9dda1df0a0d36f171
+*/
+
+// // index css java
+// let body = document.getElementsByTagName("body")[0];
+
+// function setColor(name) {
+//   body.style.backgroundColor = name;
+// }
+
+// Write a C program to print all natural numbers in reverse (from n to 1). – using while loop
+function nemeh(num1, num2) {
+  return num1 + num2;
 }
+let niilber = nemeh(10, 25);
