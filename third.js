@@ -12,14 +12,15 @@ for (let i = 0; i < row; i++) {
   console.log(str);
 }
 // C program to print square or rectangle star pattern
-const square = (n) => {
-  for (let i = 1; i <= n; i++) {
-    let m = "*****";
-    console.log(m);
+const squareStar = (a) => {
+  for (let j = 0; j < a; j++) {
+    console.log("*");
+    for (let i = 0; i < a; i++) {
+      console.log("*");
+    }
   }
 };
-square(10);
-
+squareStar(5);
 // 2. functiond 3 too uguud hamgiin iheesee 2dhiign olno
 //input: (10, 11, 30)
 //output: 11

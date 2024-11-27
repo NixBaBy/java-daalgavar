@@ -164,15 +164,16 @@ for (i = 1; i <= too; i = i + 1) {
   }
 */
 
-// // index css java
-// let body = document.getElementsByTagName("body")[0];
+// index css java
+let body = document.getElementsByTagName("body")[0];
 
-// function setColor(name) {
-//   body.style.backgroundColor = name;
-// }
-
-// Write a C program to print all natural numbers in reverse (from n to 1). – using while loop
-function nemeh(num1, num2) {
-  return num1 + num2;
+function setColor(name) {
+  body.style.backgroundColor = name;
 }
-let niilber = nemeh(10, 25);
+
+// // Write a C program to print all natural numbers in reverse (from n to 1). – using while loop
+// function nemeh(num1, num2) {
+//   return num1 + num2;
+// }
+// let niilber = nemeh(10, 25);
+
