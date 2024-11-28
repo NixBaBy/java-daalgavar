@@ -33,12 +33,10 @@ findAverageAge(ages);
 
 // array dotorh hamgiin baga gehdee sondgoi utgiig ol
 let numbers = [44, 5, 25, 46, 235, 87, 233, 98, 127, 11];
-const findLittle = (arr) => {
-  let littleNum = arr[0];
+const findMin = (arr) => {
+  let minNum = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-      console.log(arr[i]);
-    }
+    if (arr[i] % 2 == 0 || minNum > arr[i])
   }
 };
-let answer1 = findLittle(numbers);
+let answer1 = findMin(numbers);
