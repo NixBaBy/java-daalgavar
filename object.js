@@ -30,15 +30,16 @@
 
 //  suragchdiin dungiin dundaj ol
 let students = [
-  { name: "boldo", age: 15, grades: [100, 100, 100, 100, 100], gender: "male" },
-  { name: "tugu", age: 16, grades: [90, 90, 90, 90, 90], gender: "male" },
+  { name: "boldo", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
+  { name: "tugu", age: 10, grades: [90, 90, 90, 90, 90], gender: "male" },
   {
     name: "sapara",
-    age: 17,
+    age: 43,
     grades: [100, 100, 100, 100, 100],
     gender: "male",
   },
 ];
+// neg suragchiin dungiin dundaj
 const findOneStudentAverageGrade = (oneStudent) => {
   let grades = oneStudent.grades;
   let num = 0;
@@ -48,7 +49,7 @@ const findOneStudentAverageGrade = (oneStudent) => {
   let average = num / grades.length;
   return average;
 };
-
+// buh suragchiin dungiiin dundaj
 const findAllStudentAverageGrade = (allStudent) => {
   let num = 0;
   for (let i = 0; i < students.length; i++) {
@@ -60,3 +61,15 @@ const findAllStudentAverageGrade = (allStudent) => {
 };
 let answer = findAllStudentAverageGrade(students);
 console.log(answer);
+
+// buh suragchiin nasnii dundaj
+const findAverageAge = (allStudent) => {
+  let allAges = 0;
+  for (let i = 0; i < allStudent.length; i++) {
+    allAges = allAges + allStudent[i].age;
+  }
+  let averageAge = allAges / allStudent.length;
+  return averageAge;
+};
+let answer1 = findAverageAge(students);
+console.log(answer1);
