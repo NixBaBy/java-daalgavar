@@ -31,17 +31,84 @@
 //  suragchdiin dungiin dundaj ol
 let students = [
   { name: "boldo", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
-  { name: "tugu", age: 10, grades: [90, 90, 90, 90, 90], gender: "male" },
+  { name: "tugu", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
   {
     name: "sapara",
-    age: 43,
-    grades: [100, 100, 100, 100, 100],
+    age: 13,
+    grades: [90, 90, 90, 90, 90],
     gender: "male",
   },
+  {
+    name: "hulan",
+    age: 10,
+    grades: [100, 100, 100, 100, 100],
+    gender: "female",
+  },
+  { name: "saraa", age: 10, grades: [20, 20, 20, 20, 20], gender: "female" },
+  {
+    name: "nawchaa",
+    age: 10,
+    grades: [20, 20, 20, 20, 20],
+    gender: "female",
+  },
+  {
+    name: "tsetsegee",
+    age: 10,
+    grades: [20, 20, 20, 20, 20],
+    gender: "female",
+  },
 ];
-// neg suragchiin dungiin dundaj
-const findOneStudentAverageGrade = (oneStudent) => {
-  let grades = oneStudent.grades;
+// eregtei suragchid ner hewleh*****************************************************************************************************
+const findGenderMale1 = (male) => {
+  let genderMale = [];
+  for (let i = 0; i < male.length; i++) {
+    if (male[i].gender == "male") {
+      genderMale.push(male[i].name);
+    }
+  }
+  return genderMale;
+};
+let maleStudents1 = findGenderMale1(students);
+console.log("eregtei suragchid:", maleStudents1);
+// emegtei suragchid ner *****************************************************************************************************
+const findGenderFemale1 = (female) => {
+  let genderFemale = [];
+  for (let i = 0; i < female.length; i++) {
+    if (female[i].gender == "female") {
+      genderFemale.push(female[i].name);
+    }
+  }
+  return genderFemale;
+};
+let femaleStudents1 = findGenderFemale1(students);
+console.log("emegtei suragchid", femaleStudents1);
+// eregtei suragchid uguh*****************************************************************************************************
+const findGenderMale = (male) => {
+  let genderMale = [];
+  for (let i = 0; i < male.length; i++) {
+    if (male[i].gender == "male") {
+      genderMale.push(male[i]);
+    }
+  }
+  return genderMale;
+};
+let maleStudents = findGenderMale(students);
+
+// emegtei suragchid uguh *****************************************************************************************************
+const findGenderFemale = (female) => {
+  let genderFemale = [];
+  for (let i = 0; i < female.length; i++) {
+    if (female[i].gender == "female") {
+      genderFemale.push(female[i]);
+    }
+  }
+  return genderFemale;
+};
+let femaleStudents = findGenderFemale(students);
+
+// neg eregtei suragchiiin dunge oloh *************************************************************************************
+const findOneStudentAverageGrades = (oneMaleStudent) => {
+  let grades = oneMaleStudent.grades;
   let num = 0;
   for (let i = 0; i < grades.length; i++) {
     num = num + grades[i];
@@ -49,27 +116,53 @@ const findOneStudentAverageGrade = (oneStudent) => {
   let average = num / grades.length;
   return average;
 };
-// buh suragchiin dungiiin dundaj
-const findAllStudentAverageGrade = (allStudent) => {
+let oneStudentGrade = findOneStudentAverageGrades(maleStudents[0]);
+
+// buh eregtei suragchiiin dunge oloh *************************************************************************************
+const findAllStudentAverageGrade = (maleStudent) => {
   let num = 0;
-  for (let i = 0; i < students.length; i++) {
-    let average = findOneStudentAverageGrade(allStudent[i]);
+  for (let i = 0; i < maleStudent.length; i++) {
+    let average = findOneStudentAverageGrades(students[i]);
     num = num + average;
   }
-  let allAverage = num / allStudent.length;
-  return allAverage;
+  let allStudentAverage = num / maleStudent.length;
+  return allStudentAverage;
 };
-let answer = findAllStudentAverageGrade(students);
-console.log(answer);
+let allStudentsGrade = findAllStudentAverageGrade(maleStudents);
+console.log("eregtei suragchidiin dundaj dun:", allStudentsGrade);
 
-// buh suragchiin nasnii dundaj
-const findAverageAge = (allStudent) => {
-  let allAges = 0;
-  for (let i = 0; i < allStudent.length; i++) {
-    allAges = allAges + allStudent[i].age;
+// neg emegtei suragchiiin dunge oloh *************************************************************************************
+const findOneFemaleStudentAverageGrade = (oneFemaleStudent) => {
+  let grades = oneFemaleStudent.grades;
+  let num = 0;
+  for (let i = 0; i < grades.length; i++) {
+    num = num + grades[i];
   }
-  let averageAge = allAges / allStudent.length;
-  return averageAge;
+  let average = num / grades.length;
+  return average;
 };
-let answer1 = findAverageAge(students);
-console.log(answer1);
+let oneFemaleGrade = findOneFemaleStudentAverageGrade(femaleStudents[0]);
+
+// buh emegtei suragchiiin dunge oloh *************************************************************************************
+
+const findAllFemaleStudentGrade = (allFemaleStudent) => {
+  let num = 0;
+  for (let i = 0; i < femaleStudents.length; i++) {
+    let femaleAverage = findOneFemaleStudentAverageGrade(femaleStudents[i]);
+    num = num + femaleAverage;
+  }
+  let answer = num / femaleStudents.length;
+  return answer;
+};
+let femaleStudentsAverage = findAllFemaleStudentGrade(femaleStudents);
+console.log("emegtei suragchdiin dundaj dun:", femaleStudentsAverage);
+
+// eregtei emegtei suragchdiin ali ni iluu duntei ve
+const findMoregrade = (moreGrade) => {
+  if (femaleStudentsAverage > allStudentsGrade) {
+    console.log("buh emegtei suragchdiin dun iluu");
+  } else {
+    console.log("buh eregtei suragchdiin dun iluu");
+  }
+};
+findMoregrade();
