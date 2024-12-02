@@ -33,7 +33,7 @@ let students = [
   { name: "boldo", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
   { name: "tugu", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
   {
-    name: "sapara",
+    name: "bata",
     age: 13,
     grades: [90, 90, 90, 90, 90],
     gender: "male",
@@ -157,12 +157,17 @@ const findAllFemaleStudentGrade = (allFemaleStudent) => {
 let femaleStudentsAverage = findAllFemaleStudentGrade(femaleStudents);
 console.log("emegtei suragchdiin dundaj dun:", femaleStudentsAverage);
 
-// eregtei emegtei suragchdiin ali ni iluu duntei ve
-const findMoregrade = (moreGrade) => {
-  if (femaleStudentsAverage > allStudentsGrade) {
-    console.log("buh emegtei suragchdiin dun iluu");
-  } else {
-    console.log("buh eregtei suragchdiin dun iluu");
-  }
+//  ergtei genderiin haritsaag oloh
+const findMaleGenderPer = (genderPer) => {
+  maleStudentsPer = (maleStudents.length / students.length) * 100;
 };
-findMoregrade();
+findMaleGenderPer(students);
+console.log("eregtei suragchdiin huwi", maleStudentsPer, "%");
+
+//  emegtei genderiin haritsaag oloh
+
+const findFemaleGenderPer = (genderPer) => {
+  femaleStudentsPer = (femaleStudents.length / students.length) * 100;
+};
+findFemaleGenderPer(students);
+console.log("emegtei suragchdiin huwi", femaleStudentsPer, "%");

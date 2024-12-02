@@ -73,3 +73,20 @@ const findTotalZarlaga = (input) => {
 };
 let answer3 = findTotalZarlaga(answer1);
 console.log("niit zarlaga", answer3);
+
+const chatProgram = (a, b, c) => {
+  a();
+  b();
+  c();
+};
+let askQuestion = chatProgram(
+  () => {
+    console.log("bye");
+  },
+  () => {
+    console.log("again ");
+  },
+  () => {
+    console.log("tuguldur");
+  }
+);
