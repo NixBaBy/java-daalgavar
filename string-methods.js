@@ -23,35 +23,3 @@
 //   }
 //   console.log(lyrics + "!");
 // });
-
-//CHALLENGES
-// 1. INPUT: "Hello world! I am Fullstack Developer"
-//    Ehendeh hamgiin urt ugiin olj hevleh
-//    OUTPUT: "Fullstack"
-let text = "Hello world! I am Fullstack Developer tuguldurbolsuga";
-
-const oneWord = (tusug) => {
-  const words = text.split(" ");
-  return words;
-};
-let wordsOneword = oneWord();
-const findLengthWord = (word) => {
-  let lengthWord = word[0];
-  for (let i = 0; i < word.length; i++) {
-    if (word[i].length > lengthWord.length) {
-      lengthWord = word[i];
-    }
-  }
-  return lengthWord;
-};
-let answer = findLengthWord(wordsOneword);
-console.log(answer);
-
-// 2. INPUT: "Hello world! I am Fullstack Developer"
-//    Hamgiin ehnii hamgiin suuliing ug hoyriin bairiig solij hevleh
-//    OUTPUT: "Developer world! I am Fullstack Hello"
-let text = "Hello world! I am Fullstack Developer tuguldurbolsuga";
-let splited = text.split(" ");
-let first = text.replace(splited[splited.length - 1], splited[0]);
-let last = first.replace(splited[0], splited[splited.length - 1]);
-console.log(last);
