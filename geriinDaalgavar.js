@@ -20,19 +20,31 @@ console.log(answer);
 let first = input.replace(splited[splited.length - 1], splited[0]);
 let last = first.replace(splited[0], splited[splited.length - 1]);
 console.log(last);
+
+// 12.4 gertee hiiw
+const contactsString =
+  "Alice:99123456,Bob:99678901,Charlie:99543210,David:99321098,Eve:99234567,Frank:99456789,Grace:99789012,Hannah:99876543,Ivy:99987654,Jack:99111234";
+// Ene stringees nereern haihad zuvhun dugaarn garj ireh
+// 1. Өгөгдлийг цэвэрлэх
+const contactsArray = contactsString
+  .split(",")
+  .map((first) => first.split(":"));
+
+const contacts = Object.fromEntries(contactsArray);
+function findPhoneNumber(name) {
+  return contacts[name] || "Хайсан нэр олдсонгүй";
+}
+console.log(findPhoneNumber("Alice"));
+
 // 3. Input: "97699123456"
 //    Utasnii dugaariig formatalj zuv bolgoj haruulah
 //    Output: "(976) 99123456"
-let phoneNumber = "178902435809";
-let formattedNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
-console.log(formattedNumber);
-
+let number = "97690131305";
+let replacedNumber = number.replace("976", "(976) ");
+console.log(replacedNumber);
 // 4. Input: "I am fucking tired", 'fucking'
 //    Haraaliin ugiin censor hiih
 //    Output: "I am **** tired"
-
-// Example
-const inputText = "I am fucking tired";
-const wordToCensor = "fucking";
-const output = censorWord(inputText, wordToCensor);
-console.log(output); // "I am **** tired"
+let censoredWord = "bitii huts fucking solior";
+let replacedcensoredWord = censoredWord.replace("fucking", "****");
+console.log(replacedcensoredWord);
