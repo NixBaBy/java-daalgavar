@@ -205,3 +205,41 @@ let averagePer = employees.map((names) => {
   return sum / employees.performance.length;
 });
 console.log(averagePer);
+
+// Find ************************************************************
+let foundItem = inventory.find((fruit) => {
+  return fruit.name == search;
+});
+//   spread operator ***************************************************************
+let numbers = [3, 234, 67, 2, 6, 89, 5];
+let numbers2 = [4, 234, 77, 3, 8, 89, 5];
+// hamgiin ih toog ol
+let allNumbers = [...numbers, ...numbers2];
+
+// find spread operator
+const names = [
+  { name: "Alice", age: 20 },
+  { name: "Bob", age: 25 },
+  { name: "John", age: 30 },
+  { name: "Jane", age: 35 },
+  { name: "Joe", age: 40 },
+];
+const name2 = [
+  { name: "Andy", age: 20 },
+  { name: "Bilguun", age: 25 },
+  { name: "Jargalmaa", age: 30 },
+  { name: "Anguuch", age: 35 },
+  { name: "Mah", age: 40 },
+  { name: "Chinguun", age: 45 },
+];
+// 1. FIND FIRST PERSON THAT NAME STARTS WITH 'C'
+let allNames = [...names, ...name2];
+let foundCname = allNames.find((person) => {
+  return person.name[0] == "C";
+});
+console.log("c geer ehelsn nertei ehnii hun", foundCname);
+// 2. FIND FIRST PERSON THAT OLDER THAN 25
+let findOlder25 = allNames.find((person) => {
+  return person.age >= 25;
+});
+console.log("25aas ih buyu tentsuu nastai ehnii hun:", findOlder25);

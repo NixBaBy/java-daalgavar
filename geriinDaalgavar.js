@@ -31,11 +31,6 @@ console.log(formattedNumber);
 //    Haraaliin ugiin censor hiih
 //    Output: "I am **** tired"
 
-function censorWord(inputText, wordToCensor) {
-  const censoredWord = "*".repeat(wordToCensor.length);
-  return inputText.replace(wordToCensor, censoredWord);
-}
-
 // Example
 const inputText = "I am fucking tired";
 const wordToCensor = "fucking";
