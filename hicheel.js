@@ -41,3 +41,5 @@ let number1 = [1, 2, 3, 4, 5];
 let number2 = [5, 4, 7, 89, 1];
 let allNumber = [...number1, ...number2];
 console.log(allNumber);
+
+// .toLover
