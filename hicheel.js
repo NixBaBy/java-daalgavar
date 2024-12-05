@@ -42,4 +42,12 @@ let number2 = [5, 4, 7, 89, 1];
 let allNumber = [...number1, ...number2];
 console.log(allNumber);
 
-// .toLover
+// string iig string deer nemeh
+let num = "12";
+let num1 = "123";
+console.log(Number(num) + Number(num1));
+
+// numberdeer number nemeh
+let num2 = 123;
+let num3 = 454;
+console.log(num2.toString() + num3.toString());

@@ -58,6 +58,19 @@ let students = [
     gender: "female",
   },
 ];
+//  zuvhun b usgeer ehlsn neriig returnguger oloh
+const getBStudents = (students) =>
+  students.filter((student) => student.name[0] == "b");
+console.log(getBStudents(students));
+// const getAges = (students) => students.map((student) => student.age);
+// const ages = getAges(students);
+// console.log({ ages });
+
+// zuvhun ergtei suragchdiig ol baga bichigleltei
+const getMaleStudents = (students) =>
+  students.filter((student) => student.gender == "male");
+console.log(getMaleStudents(students));
+
 // eregtei suragchid ner hewleh*****************************************************************************************************
 const findGenderMale1 = (male) => {
   let genderMale = [];
