@@ -1,63 +1,33 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+h1 {
+  width: 9%;
+  margin-left: 450px;
 }
-.calculator {
-  width: 400px;
-  height: 500px;
-  background-color: gray;
+#parent {
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
   margin: auto;
-  border-radius: 12px;
-  margin-top: 300px;
-  position: relative;
 }
-.nuur {
-  width: 100%;
-  background-color: #464748;
-  height: 30%;
-  border-radius: 10px 10px 0px 0px;
-  position: relative;
+.card {
+  width: 320px;
 }
-.buttons {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.out {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: red;
-}
-.close {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #febc2e;
-}
-.zoom {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #27c840;
-}
-.uildeluud {
-  width: 100%;
-  height: 87.5px;
-  display: flex;
-}
-.uildeluud button {
-  width: 100px;
-  height: 100%;
-  background-color: #575859;
-  border: 1px solid black;
-  color: white;
-  font-size: 21px;
+.price {
   font-weight: 800;
+  font-size: 1.5rem;
 }
-.right {
-  background-color: #ff9e0b;
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.inf {
+  color: gray;
+}
+.card img {
+  border-radius: 10px;
+  width: 300px;
+  height: 250px;
 }

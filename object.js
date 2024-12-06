@@ -58,6 +58,14 @@ let students = [
     gender: "female",
   },
 ];
+//  challange
+//  get students that the name includes B letter // name.include() method
+// get students tath their name length is longer than 5 characters
+//  nasn sondgoi too baihin bol ol
+// employ
+// tsalinn 70k gaas ih
+// department engineer gesnig ol
+//  2project 2lngiin complet hiisn ajilchdiig ol
 //  zuvhun b usgeer ehlsn neriig returnguger oloh
 const getBStudents = (students) =>
   students.filter((student) => student.name[0] == "b");

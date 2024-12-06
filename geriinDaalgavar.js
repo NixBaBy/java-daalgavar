@@ -37,3 +37,42 @@ console.log(replacedNumber);
 let censoredWord = "bitii huts fucking solior";
 let replacedcensoredWord = censoredWord.replace("fucking", "****");
 console.log(replacedcensoredWord);
+
+let students = [
+  { name: "boldo", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
+  { name: "tugu", age: 10, grades: [100, 100, 100, 100, 100], gender: "male" },
+  {
+    name: "bata",
+    age: 13,
+    grades: [90, 90, 90, 90, 90],
+    gender: "male",
+  },
+  {
+    name: "hulan",
+    age: 10,
+    grades: [100, 100, 100, 100, 100],
+    gender: "female",
+  },
+  { name: "saraa", age: 10, grades: [20, 20, 20, 20, 20], gender: "female" },
+  {
+    name: "nawchaa",
+    age: 10,
+    grades: [20, 20, 20, 20, 20],
+    gender: "female",
+  },
+  {
+    name: "tsetsegee",
+    age: 10,
+    grades: [20, 20, 20, 20, 20],
+    gender: "female",
+  },
+];
+//  challange
+//  get students that the name includes B letter // name.include() method
+
+// get students tath their name length is longer than 5 characters
+//  nasn sondgoi too baihin bol ol
+// employ
+// tsalinn 70k gaas ih
+// department engineer gesnig ol
+//  2project 2lngiin complet hiisn ajilchdiig ol
