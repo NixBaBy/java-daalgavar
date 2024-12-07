@@ -55,3 +55,42 @@ for (let i = 0; i < cardInfos.length; i++) {
   cards += card;
 }
 parentDiv.innerHTML = cards;
+
+// small weeks
+let smallWeeks = document.getElementById("small-weeks");
+smallweeksInfos = [
+  {
+    imgUrl:
+      "https://unread.today/files/007afc64-288a-4208-b9d7-3eda84011c1d/e97107737378d8ef06c003d3d291e14f_square.png",
+    min: "4 мин",
+    tittle: " Тогтвортой ажил олголт гэж юу вэ? + Дотоодын",
+    name: "Тогтвортой хөгжил",
+  },
+  {
+    imgUrl:
+      "https://unread.today/files/969a1aed-77a4-45e9-b7b7-3ee2709aaf31/b2bfc9f18b49d69b0b4827e933132734_square.jpg",
+    min: "1 мин",
+    tittle: "IVA: Хиймэл оюунт харилцааны ажилтан,",
+    name: "Онцлох бизнес",
+  },
+];
+let smallcard = "";
+for (let i = 0; i < smallweeksInfos.length; i++) {
+  let card = `    <div class="small1">
+            <img
+              src="${smallweeksInfos[i].imgUrl}"
+              alt=""
+            />
+            <div class="small-week-bot">
+              <div class="small-week-ps">
+                <p class="small-p1">${smallweeksInfos[i].name}</p>
+                <p class="small-p2">
+                  ${smallweeksInfos[i].tittle}
+                </p>
+                <p class="minut2">${smallweeksInfos[i].min}</p>
+              </div>
+            </div>
+          </div>`;
+  smallcard += card;
+}
+smallWeeks.innerHTML = smallcard;
