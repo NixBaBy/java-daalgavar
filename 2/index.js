@@ -1,84 +1,57 @@
-let parentDiv = document.getElementById("parent");
-let allcards = [
+let parentDiv = document.getElementById("sliders-name");
+
+let cardInfos = [
   {
+    min: "1мин",
+    tittle: "Нобель 2024-ийн эзэд: ХЭН? ЯАГААД?",
+    Brand: "Techworm",
     imgUrl:
-      "	https://cdn1.unegui.mn/media/cache1/97/62/9762ac3016506ced02be06d07c1ae384.webp",
-    price: "5say",
-    tittle: "Хотын төвд 3 өрөө орон сууц",
-    inf: "6 минутын өмнө УБ — Хан-Уул, Хан-Уул, 13 horoolol",
+      "https://unread.today/files/fb0f77dd-ca16-4803-8f17-83cccdc85cb1/c8455aee612dec41ad3ae7e381835364_square.jpg",
   },
   {
+    min: "5мин",
+    tittle: "Өвөрмөц мэргэжлийг өвөрлөсөн түүхүүд",
+    Brand: "Тайлбарлах",
     imgUrl:
-      "https://cdn1.unegui.mn/media/cache1/2f/cd/2fcd51b0de503666a3ea7cb691b88a82.webp",
-    price: "350say",
-    tittle: "Toyota Prius 10, 11, 2001/2012",
-    inf: "7 минутын өмнө УБ — Хан-Уул, Хан-Уул, Хороо 4",
+      "https://unread.today/files/007afc64-288a-4208-b9d7-3eda84011c1d/d0e8695ff2eb996c217d9697d4a71e8f_square.jpg",
   },
   {
+    min: "10мин",
+    tittle: "Пробиотик: Таны гэдсийг хамгаалагч супер баатруудтай ",
+    Brand: "зочинтой ",
     imgUrl:
-      "	https://cdn1.unegui.mn/media/cache1/bd/5a/bd5a67c0f777764fc4dcc72842a61529.webp",
-    price: "9.4say",
-    tittle: "Toyota Prius 10, 11, 2001/2012",
-    inf: "8 минутын өмнө УБ — , Хан-Уул, Хороо 6",
+      "https://unread.today/files/007afc64-288a-4208-b9d7-3eda84011c1d/9e125b66fda6825bdebde62819344e7f_square.jpg",
   },
   {
+    min: "3мин",
+    tittle: "Улаанбаатарын хамгийн таатай оффис: Алтан Жолоо Тауэр",
+    Brand: "мэдүүштэй",
     imgUrl:
-      "https://cdn1.unegui.mn/media/cache1/00/1c/001c534157beb2ee8756ef833577e59f.webp",
-    price: "500,000",
-    tittle: "Toyota Prius 10, 11, 2001/2012",
-    inf: "9 минутын өмнө УБ — Хан-Уул,  Хороо 5",
+      "https://unread.today/files/5409fb7e-6b28-4095-834c-ece240290ec2/383865a99e5786f1c5cce819b224738f_square.png",
   },
   {
+    min: "4мин",
+    tittle: "Апп тойм: eSchool - Боловсролын нэгдсэн платформ",
+    Brand: "Тайлбарлах",
     imgUrl:
-      "	https://cdn1.unegui.mn/media/cache1/45/e2/45e2930a463e161b3d67d40e866feeef.webp",
-    price: "9.5say",
-    tittle: "Toyota Prius 10, 11, 2001/2012",
-    inf: "9 минутын өмнө УБ — Хан-Уул,  Хороо 5",
-  },
-  {
-    imgUrl:
-      "https://cdn1.unegui.mn/media/cache1/cb/fd/cbfdb1d7367d57a06f2aef47ec935306.webp",
-    price: "80,000",
-    tittle: "Toyota Prius 10, 11, 2001/2012",
-    inf: "9 минутын өмнө УБ — Хан-Уул,  Хороо 5",
-  },
-  {
-    imgUrl:
-      "https://cdn1.unegui.mn/media/cache1/82/9d/829d38300799e6d08bf7e8d89b74c2b0.webp",
-    price: "1.07 terbum",
-    tittle: "Regis place хотхонд 115м² 2 өрөө",
-    inf: "9 минутын өмнө УБ — Хан-Уул,  Хороо 5",
-  },
-  {
-    imgUrl:
-      "	https://cdn1.unegui.mn/media/cache1/e7/a5/e7a5dc58dc16d8114f86744456a3fa8a.webp",
-    price: "1.07 terbum",
-    tittle: "Regis place хотхонд 115м² 2 өрөө",
-    inf: "9 минутын өмнө УБ — Хан-Уул,  Хороо 5",
-  },
-  {
-    imgUrl:
-      "  https://cdn1.unegui.mn/media/cache1/16/21/1621d79ef7332f061caf06c5f003cc5b.webp",
-    price: "1.07 terbum",
-    tittle: "Regis place хотхонд 115м² 2 өрөө",
-    inf: "9 минутын өмнө УБ — Хан-Уул,  Хороо 5",
+      "https://unread.today/files/dca82359-3f6e-4c03-99ef-ef493c68a7aa/afa433c76feccdc25e0a21723c9f9f3f_square.jpg",
   },
 ];
 let cards = "";
-
-for (let i = 0; i < allcards.length; i++) {
-  let card = `   <div class="card">
-              <img
-                src="${allcards[i].imgUrl}"
-                alt=""
-              />
-              <div class="card-detail">
-                <div class="price">${allcards[i].price}</div>
-                <div class="tittle">${allcards[i].tittle}</div>
-                <div class="inf">${allcards[i].inf}</div>
-              </div>
-            </div>`;
-  cards = cards + card;
+for (let i = 0; i < cardInfos.length; i++) {
+  let card = `    <div class="slider">
+     <img src="${cardInfos[i].imgUrl}" alt="">
+        <div class="slider-top">
+          <div class="cycle"></div>
+          <div class="min">
+            <p>${cardInfos[i].min}</p>
+          </div>
+        </div>
+        <div class="slider-bot">
+          <p>${cardInfos[i].tittle}</p>
+          <p>${cardInfos[i].Brand}</p>
+        </div>
+      </div>`;
+  cards += card;
 }
-
 parentDiv.innerHTML = cards;
